@@ -1,2 +1,0 @@
-add_library(game
-        Game.cpp)

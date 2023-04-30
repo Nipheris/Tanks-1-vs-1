@@ -5,7 +5,7 @@
 #ifndef COURSE_WORK_SRC_GAME_MAINWINDOW_H
 #define COURSE_WORK_SRC_GAME_MAINWINDOW_H
 
-#include "SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 #define HEIGHT 948
 #define WIDTH 1738
