@@ -4,6 +4,6 @@
 
 int main()
 {
-	auto game = Game::instance();
+	auto game = std::make_unique<Game>();
 	game->run();
 }

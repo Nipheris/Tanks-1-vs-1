@@ -14,17 +14,13 @@
 class MainWindow
 {
 private:
-	sf::RenderWindow* window;
+	std::unique_ptr<sf::RenderWindow> window;
 	sf::VideoMode videoMode = sf::VideoMode(WIDTH, HEIGHT);
 
-	static MainWindow* _instance;
-
-
 public:
-	explicit MainWindow(unsigned short fps, bool verticalSync);
-	static MainWindow* instance(unsigned short fps = 60, bool verticalSync = true);
+	explicit MainWindow(unsigned short fps = 60, bool verticalSync = true);
 
-	~MainWindow();
+	~MainWindow() = default;
 };
 
 #endif //COURSE_WORK_SRC_GAME_MAINWINDOW_H

@@ -4,21 +4,9 @@
 
 #include "MainWindow.h"
 
-MainWindow* MainWindow::_instance = nullptr;
 MainWindow::MainWindow(const unsigned short fps, const bool verticalSync)
 {
-	window = new sf::RenderWindow(videoMode, TITLE);
-	window->setVerticalSyncEnabled(verticalSync);
-	window->setFramerateLimit(fps);
-}
-MainWindow* MainWindow::instance(const unsigned short fps, const bool verticalSync)
-{
-	if (MainWindow::_instance == nullptr)
-		MainWindow::_instance = new MainWindow(fps, verticalSync);
-	return _instance;
-}
-MainWindow::~MainWindow()
-{
-	delete _instance;
-	delete window;
+	this->window = std::make_unique<sf::RenderWindow>(videoMode, TITLE);
+	this->window->setVerticalSyncEnabled(verticalSync);
+	this->window->setFramerateLimit(fps);
 }

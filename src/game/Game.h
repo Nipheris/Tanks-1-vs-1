@@ -15,12 +15,9 @@
 class Game : public IUpdatable
 {
 private:
-	MainWindow* mainWindow;
+	std::unique_ptr<MainWindow> mainWindow;
 	sf::Clock deltaClock{};
 	float deltaTime{};
-
-	static Game* _instance;
-
 
 	void update() override;
 
@@ -29,9 +26,8 @@ private:
 	void updateDeltaTime();
 public:
 	Game();
-	static Game* instance();
 
-	~Game();
+	~Game() = default;
 
 	void run();
 };
