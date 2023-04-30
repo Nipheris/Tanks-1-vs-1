@@ -13,14 +13,14 @@
 
 class MainWindow
 {
- private:
+private:
 	sf::RenderWindow* window;
 	sf::VideoMode videoMode = sf::VideoMode(WIDTH, HEIGHT);
 
 	static MainWindow* _instance;
 
 
- public:
+public:
 	explicit MainWindow(unsigned short fps, bool verticalSync);
 	static MainWindow* instance(unsigned short fps = 60, bool verticalSync = true);
 

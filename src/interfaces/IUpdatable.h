@@ -7,7 +7,7 @@
 
 class IUpdatable
 {
- public:
+public:
 	virtual void update() = 0;
 };
 

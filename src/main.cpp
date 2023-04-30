@@ -7,4 +7,3 @@ int main()
 	auto game = Game::instance();
 	game->run();
 }
-

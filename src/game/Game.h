@@ -14,7 +14,7 @@
 
 class Game : public IUpdatable
 {
- private:
+private:
 	MainWindow* mainWindow;
 	sf::Clock deltaClock{};
 	float deltaTime{};
@@ -27,7 +27,7 @@ class Game : public IUpdatable
 	void updateEvents();
 
 	void updateDeltaTime();
- public:
+public:
 	Game();
 	static Game* instance();
 
